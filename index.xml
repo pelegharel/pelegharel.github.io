@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Computery insights</title>
-    <link>https://pelegharel.github.io/</link>
+    <link>/</link>
     <description>Recent content on Computery insights</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Mar 2020 18:42:35 +0200</lastBuildDate>
     
-	<atom:link href="https://pelegharel.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Illustrations with math in your tex document</title>
-      <link>https://pelegharel.github.io/posts/inkscape/</link>
+      <link>/posts/inkscape/</link>
       <pubDate>Tue, 17 Mar 2020 18:42:35 +0200</pubDate>
       
-      <guid>https://pelegharel.github.io/posts/inkscape/</guid>
+      <guid>/posts/inkscape/</guid>
       <description>TL;DR This guide explains how to draw and add figures to a tex document using the illustration program Inkscape
 and how to automate that process.
-When writing my Thesis paper, I couldn&amp;rsquo;t find any resource on how to draw and embed figures containing math expressions in .tex documents. Specifically, I wanted to be able to write tex code inside my figures that will not look pixelated in the compiled PDF. Eventually, after much trial and error, I found a workflow that I was happy with.</description>
+When writing my Thesis paper, I couldn&amp;rsquo;t find any resources on how to draw and embed figures containing math expressions in .tex documents. Specifically, I wanted math equations inside my figures that will not look pixilated after modifying the figure size from the tex code. Eventually, after much trial and error, I found a workflow that I was happy with.</description>
     </item>
     
   </channel>
