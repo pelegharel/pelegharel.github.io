@@ -39,7 +39,7 @@ and how to automate that process.
 When writing my Thesis paper, I couldn&rsquo;t find any resources on how to draw and embed figures containing math expressions in .tex documents. Specifically, I wanted math equations inside my figures that will not look pixilated after modifying the figure size from the tex code. Eventually, after much trial and error, I found a workflow that I was happy with.">
 <meta itemprop="datePublished" content="2020-03-17T18:42:35&#43;02:00" />
 <meta itemprop="dateModified" content="2020-03-17T18:42:35&#43;02:00" />
-<meta itemprop="wordCount" content="662">
+<meta itemprop="wordCount" content="714">
 
 
 
@@ -183,12 +183,21 @@ to father learn about Inkscape.</p>
 </code></pre></div><p>This commands exports your creates two files: <code>your_drawing.pdf</code> and <code>your_drawing.pdf_tex</code>
 which can be imported in the tex document.</p>
 <h2 id="automating-the-process">Automating the process</h2>
-<p>I strongly believe that repetitive tasks are done on a computer can and should be automated.
+<p>I strongly believe that repetitive tasks can and should be automated.
 Putting the first initial effort to automate the process of embedding figures will
-save a ton a time when you need to change them.</p>
-<p>First, put your drawing in a folder called <code>figures</code> in your project folder.
-The script will convert each Inkscape <code>.svg</code> file into a <code>.tex_pdf</code> file with the same name.</p>
+save a ton a in the future when inserting new figures or updating existing ones.
+More than that, the ability to quickly update changes in a figure
+might even <em>effect your decision to perform the change in the first place</em>,
+this directly effecting the quality of your work.
+The automation process in our case includes a Python conversion script and can be set up as follows:</p>
+<ol>
+<li>
+<p>Put your drawing in a folder called <code>figures</code> in your project folder.</p>
+</li>
+<li>
 <p>Create a file name <code>fig2pdf.py</code> in your project&rsquo;s folder with the following content:</p>
+</li>
+</ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> os
 <span style="color:#f92672">import</span> glob
 
@@ -200,7 +209,8 @@ svg_files <span style="color:#f92672">=</span> glob<span style="color:#f92672">.
   os<span style="color:#f92672">.</span>system(cmd)
 </code></pre></div><p>Then, to run the script, either by double-clicking on it (Windows) or from the command line in the following manner (Windows or Linux):</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">python3 fig2pdf.py
-</code></pre></div><h1 id="embed-the-figure-in-tex">Embed the figure in tex</h1>
+</code></pre></div><p>The script converts each Inkscape <code>.svg</code> file in the figures directory into a <code>.tex_pdf</code> file with the same name.</p>
+<h1 id="embed-the-figure-in-tex">Embed the figure in tex</h1>
 <p>This a minimal tex document with all the components of embedding a figure</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex"><span style="color:#66d9ef">\documentclass</span>{article}
 
